@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celery-sqs-publisher-image"
+version = "0.0.0"
+description = "Container entrypoint to publish Celery SQS task messages"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "celery[sqs]==5.4.0",
+]
+
+[tool.setuptools]
+py-modules = ["publish"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
