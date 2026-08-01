@@ -10,5 +10,5 @@ jobs:
   build:
     uses: actionsforge/actions/.github/workflows/docker-image-validate.yml@main
     with:
-      image-tag: "["v*"]"
+      image-tag: "celery-sqs-publisher-image:test"
       scan-enabled: false
